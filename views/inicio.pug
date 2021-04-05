@@ -1,0 +1,31 @@
+extends ../layout/index.pug
+
+block slider
+    .slider
+        h1 Rio de Janeiro
+        em.margenes Aventura
+
+block contenido
+    main.container.mt-5
+        h2.text-center.mb-5 Sobre nosotros
+        .row.mb-5
+            .col-md-6 
+                p Integer convallis iaculis aliquam. Ut vestibulum, purus venenatis rutrum aliquam, felis ex consectetur eros, id posuere diam arcu sit amet felis. Nullam sit amet finibus ipsum. Aliquam mi eros, aliquet nec leo vitae, pulvinar commodo felis. Sed suscipit velit nec felis aliquam faucibus.
+                p Integer convallis iaculis aliquam. Ut vestibulum, purus venenatis rutrum aliquam, felis ex consectetur eros, id posuere diam arcu sit amet felis. Nullam sit amet finibus ipsum. Aliquam mi eros, aliquet nec leo vitae, pulvinar commodo felis. Sed suscipit velit nec felis aliquam faucibus.
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="Inicio nosotros", class="img-fluid")    
+        include ../layout/blockeViaje.pug 
+
+    .descuento
+        .container 
+            .row  
+                .col-md-6
+                    .contenido                         
+                        h3 #{descuentos.promocion}
+                        p.titulo #{descuentos.titulo}
+                        p.fecha #{descuentos.fecha}  
+                        p.precio $#{descuentos.precio} USD
+
+    .container
+        h2.mt-5.text-center Testimoniales
+        include ../layout/blockeTestimonial.pug   
